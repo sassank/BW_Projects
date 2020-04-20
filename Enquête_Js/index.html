@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Questionnaire de satisfaction</title>
+    <!-- To add in order to scale the view for mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="bg-image">
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/background.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/background2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+<!-- Définition du container avec le contenu, taille de la grille de sm-7, centré verticalement, avec fond gris -->
+<div class="container col-sm-7 vertical-center bg-light">
+    <!-- Grand titre centré -->
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="img/fnacLogo.png" alt="" width="100" height="100">
+        <div class="col-12 text-center">
+            <h2>Enquête de satisfaction</h2>
+            <p>Merci de bien vouloir prendre le temps d'y repondre</p>
+        </div>
+
+        <!-- Définition du formulaire, taille maximum de 12 sur une grille -->
+        <div class="col-12 text-left">
+            <form action='Page1/Page1.html'>
+                <!-- Les taille à l'intèrieur des lignes sont définis par bootstrap (row) -->
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputCivilité" class="control-label">Civilité</label>
+                        <select id="inputCivilité" class="form-control">
+                            <option>Monsieur</option>
+                            <option>Madame</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNom">Nom</label>
+                        <input type="text" onblur="nomToCap()" onkeydown="if(event.keyCode==32) return false;" class="form-control" id="inputNom" name="texte"
+                               placeholder="Indiquez votre nom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPrenom">Prenom</label>
+                        <input type="text" onblur="prenomToCap()" onkeydown="if(event.keyCode==32) return false;" class="form-control" id="inputPrenom"
+                               placeholder="Indiquez votre prénom">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" class="form-control" onblur="checkMail()" onkeydown="if(event.keyCode==32) return false;" id="inputEmail"
+                               placeholder="Indiquez votre email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAge">Age</label>
+                        <input type="text" class="form-control" onkeyup="checkAge()" onkeydown="if(event.keyCode==32) return false;" id="inputAge"
+                               placeholder="Merci d'indiquez votre âge">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="return checkPage1();">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="cookies.js"></script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
